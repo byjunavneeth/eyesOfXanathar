@@ -35,9 +35,8 @@ class DiceBot(discord.Client):
 
 bot = DiceBot()
 
-# =========================================================
 # UNIVERSAL DICE ENGINE
-# =========================================================
+
 
 def roll_expression(expression: str):
     expression = expression.replace(" ", "").lower()
@@ -124,9 +123,9 @@ async def roll(interaction: discord.Interaction, expression: str):
         )
 
 
-# =========================================================
-# INITIATIVE SYSTEM (NEW DESIGN)
-# =========================================================
+
+# INITIATIVE SYSTEM
+
 
 @bot.tree.command(name="initiative", description="Roll initiative (e.g. 2d20kh1+4 Ryze)")
 @app_commands.describe(
